@@ -77,7 +77,7 @@ ifeq ($(login),1)
 	poetry run langflow run --backend-only --port 7860 --host 0.0.0.0 --no-open-browser --log-level debug --workers 3
 else
 	@echo "Running backend with autologin";
-	LANGFLOW_AUTO_LOGIN=True poetry run langflow run --backend-only --port 7860 --host 0.0.0.0 --no-open-browser --log-level debug --workers 3
+	LANGFLOW_AUTO_LOGIN=False poetry run langflow run --backend-only --port 7860 --host 0.0.0.0 --no-open-browser --log-level debug --workers 3
 endif
 
 build_and_run:
